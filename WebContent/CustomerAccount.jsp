@@ -16,33 +16,7 @@
 <body>
 <!-- PARENT CONTAINER STARTS -->
 	<div class="container-fluid myparentS">
-			<nav class="navbar navbar-dark bg-dark">
-                 <!-- NAVBAR CONTENT -->
-                 	 <div class="col-md-1">
-                 	 </div>
-                 	 
-                 	 <div class="col-md-4 con">
-                 	 	Contact us +913747856784
-                 	 </div>
-                 	 
-                 	 <div class="col-md-3">
-                 	 </div>
-                 	 
-                 	 <div class="col-md-1 icon"><i class="fas fa-sign-in-alt"></i>
-                 	 	<b>SIGN IN</b>
-                 	 </div>
-                 	 
-                 	 <div class="col-md-1 icon"><i class="fas fa-user-plus"></i>
-                 	 	 <b>SIGN UP</b>
-                 	 </div>
-                 	 
-                 	 <div class="col-md-2 icon1">
-                 	 	<i class="fab fa-facebook-f"></i>&nbsp;&nbsp;
-                 	 	<i class="fab fa-twitter"></i>&nbsp;&nbsp;
-                 	 	<i class="fas fa-envelope"></i>&nbsp;&nbsp;
-                 	 	<i class="fab fa-google-plus-g"></i>&nbsp;&nbsp;
-                 	 </div>
-           </nav>
+			<%@include file="Navigation2.jsp" %>
 <!-- END OF ROW 1 -->  
         <nav>
 		    <div class="row">
@@ -98,7 +72,7 @@
 				 <ul class="navbar-nav">
 					 <li class="nav-item dropdown drops">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <b>Baby&nbsp&amp;&nbspKids</b><b class="caret"></b>
+                           <b>Baby&nbsp;&amp;&nbsp;Kids</b><b class="caret"></b>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#">Action</a>
@@ -111,7 +85,7 @@
 				 <ul class="navbar-nav">
 					 <li class="nav-item dropdown drops">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <b>Home&nbsp;&amp;&nbspFurniture</b><b class="caret"></b>
+                           <b>Home&nbsp;&amp;&nbsp;Furniture</b><b class="caret"></b>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#">Action</a>
@@ -160,54 +134,124 @@
        				    <hr class="myline">
        				    
        				    <form action="changepassword" method="post">
-     		                 <label>Old password</label><br/>
-     		                 <input type="text" name="oldpwd" size="40"><br/>
-     		                 <label>New password</label><br/><input type="text" name="newpwd" size="40"><br/>
-     		                 <label>Retype new password</label><br/>
-     		                 <input type="text" name="renew" size="40">
-     		                 
-     		                 <input  type="submit" class="cen" id="c" value="SAVE NEW PASSWORD">
+     		                 <div class="row">
+	       				       <div class="col-md-6">
+	       				            Old Password<br>
+	       				            <input type="text" size="41" name="oldpwd">
+	       				            
+	       				       </div>
+	       				     </div>
+	       				      <br>
+     		                  <div class="row">
+		       				       <div class="col-md-6">
+		       				            New Password<br>
+		       				            <input type="text" size="41" name="newpwd">
+		       				            
+		       				       </div>
+		       				       <div class="col-md-6">
+		       				            Retype password<br>
+		       				            <input type="text" size="41" name="renew">
+		       				       </div>
+	       				      </div>
+     		                  <br>
+     		                  <div class="row">
+	       				       <div class="col-md-4">
+	       				          
+	       				       </div>
+	       				       <div class="col-md-4">
+	       				            
+	       				             <input type="submit" class="cen" id="c" value=" Save New Password">
+	       				       </div>
+	       				       <div class="col-md-4">
+	       				       
+	       				       </div>
+	       				  </div>
      		                 
      		            </form>
                      
-                     <hr>
+                        <hr>
                      
-                     <h3><b>PERSONAL DETAILS</b></h3>
+                        <h3><b>PERSONAL DETAILS</b></h3>
                      
-       				 <hr class="myline">
-       				 
-       				 <table class="a">
-     		                 <tr><td>First Name</td><td>Last Name</td></tr>
-     		                 <tr><td><input type="text" size="40"></td><td><input type="text" size="40"></td></tr>
-     		         </table>
-     		          
-     		         Gender<br>  
-     		            <input type="radio" name="gender" value="male"> Male<br>
-                        <input type="radio" name="gender" value="female"> Female<br>
-                        <input type="radio" name="gender" value="other">Transgender  
-                            
-     		         <table class="a"> 
-     		              <tr><td colspan="4">Address</td></tr>
-     		              <tr><td colspan="4"><textarea cols="90" rows="1"></textarea></td></tr>
-     		         </table>
-     		         
-     		         <table class="a">     
-     		              <tr><td>City</td><td>ZIP</td><td>State</td><td>Country</td></tr>
-     		              <tr><td><input type="text" size="14"></td><td><input type="text" size="14"></td>
-     		                  <td>
-     		                  	<input type="text" size="14">   
-     		                  </td>
-     		                  <td>
-     		                  	<input type="text" size="14">
-     		                  </td>
-    		              </tr> 
-     		              <tr><td  colspan="2">Contact Number</td><td  colspan="2">Email</td></tr>
-     		              <tr><td colspan="2" ><input type="text" size="40"></td><td colspan="2"><input type="text" size="40"></td></tr>      
-     		              <tr><td colspan="4" class="cen"><button  type="button" class="cen" id="c"><i class="fa fa-save" aria-hidden="true"></i>
-     		                 Save changes</button></td>
-     		
-                     </table>
+	       				 <hr class="myline">
+	       				 <form action="personaldetails" method="post">
+	       				  <div class="row">
+	       				       <div class="col-md-6">
+	       				            First Name<br>
+	       				            <input type="text" size="41" name="fname">
+	       				            
+	       				       </div>
+	       				       <div class="col-md-6">
+	       				            Last Name<br>
+	       				            <input type="text" size="41" name="lname">
+	       				       </div>
+	       				  </div>
+       				      <br>
+     		            <div class="row">
+     		               <div class="col-md-12">
+		     		         Gender<br>  
+		     		            &nbsp;&nbsp;<input type="radio" name="gender" value="male"> Male<br>
+		                        &nbsp;&nbsp;<input type="radio" name="gender" value="female"> Female<br>
+		                        &nbsp;&nbsp;<input type="radio" name="gender" value="other">Transgender
+		                    </div>      
+                         </div> 
+                         <br>  
+     		            <div class="row">
+     		               <div class="col-md-12">
+	     		                 Address<br>
+	     		               <textarea cols="93" rows="1" name="address"></textarea>
+     		               </div>      
+                       </div>   
+     		           <br>
+     		           <div class="row">     
+     		              <div class="col-md-3"> City <br> 
+     		                     <input type="text" size="14" name="city">
+     		               </div>
+     		               <div class="col-md-3"> Zip <br> 
+     		                     <input type="text" size="14" name="zip">
+     		               </div>
+     		               <div class="col-md-3"> State <br> 
+     		                     <select name="state">
+									 
+									  <option value="US">US</option>
+									  <option value="INDIA">INDIA</option>
+									  <option value="AUSTRALIA">AUSTRALIA</option>
+								</select>
+     		               </div>
+     		               <div class="col-md-3"> Country <br> 
+     		                     <select name="country">
+									 
+									  <option value="US">US</option>
+									  <option value="INDIA">INDIA</option>
+									  <option value="AUSTRALIA">AUSTRALIA</option>
+								</select>
+  
+     		               </div>
+     		           </div>
+     		           <br>
+     		             <div class="row">
+	       				       <div class="col-md-6">
+	       				            Contact Number<br>
+	       				            <input type="text" size="41" name="contact">
+	       				            
+	       				       </div>
+	       				       <div class="col-md-6">
+	       				            Email Id<br>
+	       				            <input type="text" size="41" name="email">
+	       				       </div>
+	       				  </div>
+	       				  <br>
+	       				  <div class="row">
+	       				       <div class="col-md-4">
+	       				       </div>
+	       				       <div class="col-md-4">      
+     		                      <input type="submit" class="cen" id="c" value=" Save changes">
+     		                          
+     		                   </div>
+                          </div>
+                     </form>
                 </div>
+                
        			
        			<div class="col-md-3">
        			     <h5>
@@ -230,68 +274,9 @@
        			
           </div>
        </div> <br><br>
+       </div>
 <!-- --------END OF ROW 4------------- --> 
-       <div class="container bottom">
-           <div class="row">
-           		<div class="col-md-1"></div>
-           		   <div class="col-md-3 mycont">
-           		      <h6><b>ABOUT US</b></h6>
-           		      <h6 class="col">pallentesque habitant morbi trisque senectus et getus et malesuda fames ac turpis egastas</h6>
-           		      <hr>
-           		      <h6><b>JOIN OUR MONTHLY NEWSLETTER</b></h6>
-           		      <form>
-                           <div class="input-group">
-                                 <input type="text" class="form-control">
-                                      <div class="input-group-btn">
-                                           <button class="btn btn-default" type="submit">
-                                                 <i class="glyphicon glyphicon-send"></i>
-                                           </button>
-                                       </div>
-                            </div>
-                      </form>    
-                   </div>
-           		<div class="col-md-3 mycont">
-           		         <h6><b>BLOG</b></h6>
-           		         <img src="images/detailsquare1.jpg" class="myimg1">
-           		         <b>BLOG POST NAME</b><br><br>
-           		         <img src="images/detailsquare2.jpg" class="myimg1">
-           		         <b>BLOG POST NAME</b><br><br>
-           		         <img src="images/detailsquare3.jpg" class="myimg1">
-           		         <b> VERY VERY LONG BLOG POST NAME</b>
-           		         
-           		</div>
-           		<div class="col-md-2 mycont">
-           		     <h6><b>CONTACT</b></h6>
-           		     <h6 class="col">TECHASPECT SOLUTIONS PVT.<br>LTD.<br>PLOT NO.38 N HEIGHTS,3RD<br> FLOOR <br>HITECH CITY PHASE 2<br>
-           		      MADHAPUR<br> HYDERABAD,TELANGANA <br>500081<br> INDIA</h6>
-           		      <button id="btn1">GO TO CONTACT PAGE</button>
-           		      
-           		</div>
-           		<div class="col-md-2 mycont">
-           				<img src="images/detailsquare1.jpg" class="myimg2">&nbsp;
-           				<img src="images/detailsquare2.jpg" class="myimg2">&nbsp;
-           				<img src="images/detailsquare1.jpg" class="myimg2">&nbsp;<br>
-           				<img src="images/detailsquare1.jpg" class="myimg2">&nbsp;
-           				<img src="images/detailsquare2.jpg" class="myimg2">&nbsp;
-           				<img src="images/detailsquare1.jpg" class="myimg2">&nbsp;
-           				
-           		</div>
-           		
-            </div>
-      	   
-        </div>
-        <nav class="container bottom2">
-           <div class="row">
-               <div class="col-md-1"></div>
-                   <div class="col-md-3">
-                        <h6><b>@2018.Techaspect Solutions Private Ltd.</b></h6>
-                   </div>
-          </div>
-        </nav>
-             
-         
-         	 	 	 	        	         
-    </div>
+      <%@include file="BottomContainer.html" %>
 <!------- END OF PARENT CONTAINER--------- -->     
 
 </body>
