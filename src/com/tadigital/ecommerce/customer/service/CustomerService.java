@@ -1,12 +1,9 @@
 package com.tadigital.ecommerce.customer.service;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Properties;
 
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
-import javax.mail.BodyPart;
+
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -15,8 +12,8 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
-import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeMultipart;
+//import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
+//import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeMultipart;
 import com.tadigital.ecommerce.customer.dao.CustomerDao;
 import com.tadigital.ecommerce.customer.entity.Customer;
 
@@ -37,16 +34,21 @@ public class CustomerService {
 		return status;
 	}
 	
-	/*public ArrayList<Customer> getAllEmployees() {
-		ArrayList<Customer> employeeList = customerDao.selectAllEmployees();
-		
-		return employeeList;
-	}*/
+	
 	public boolean loginCustomer(Customer customer) {
-		boolean status=customerDao.selectCustomerByEmailAndPassword(customer);
-		return status;
+		return  customerDao.selectCustomerByEmailAndPassword(customer);
+		
 		
 	}
+	public boolean updateCustomer(Customer customer) {
+		return customerDao.changeCustomerPassword(customer);
+		
+	}
+	public boolean personalDetails(Customer customer) {
+		return customerDao.changeCustomerPersonalDetails(customer);
+		
+	}
+	
 	public String sendWelcomeMail(String name, String email) {
 		String status = "NOT SENT";
 		
@@ -72,7 +74,7 @@ public class CustomerService {
 			mimeMessage.setRecipients(Message.RecipientType.TO,	InternetAddress.parse(email));
 			
 			mimeMessage.setSubject("Welcome to TA Digital Online Shopping Portal.");
-			/*String msg = "Hello " + name + ",\n\n" +
+			String msg = "Hello " + name + ",\n\n" +
 						 "Thanks for Registering on our shopping portal." +
 						 "\nWelcome to TA Digital" +
 						 "\n\nThanks & Regards" +
@@ -91,6 +93,7 @@ public class CustomerService {
 		
 		return status;
 	}
+	
 
 
 }
